@@ -1,0 +1,6 @@
+timestamp,substation,load_mw,event
+2025-04-15 09:00:00,Substation-1,15.2,Normal
+2025-04-15 09:00:10,Substation-2,20.5,Overload
+2025-04-15 09:00:20,Substation-3,5.3,Underload
+2025-04-15 09:00:30,Substation-4,18.6,Maintenance
+2025-04-15 09:00:40,Substation-5,22.1,Fault

@@ -1,0 +1,11 @@
+timestamp,substation,load_mw,event
+2025-04-17 14:00,Substation-1,15.2,Normal
+2025-04-17 14:10,Substation-2,22.5,Transformer Overheating
+2025-04-17 14:20,Substation-3,12.8,Voltage Dip
+2025-04-17 14:30,Substation-1,25.0,Load Surge
+2025-04-17 14:40,Substation-4,10.2,Equipment Failure
+2025-04-17 14:50,Substation-2,18.0,Cooling System Activated
+2025-04-17 15:00,Substation-3,13.5,Normal
+2025-04-17 15:10,Substation-4,21.3,Breaker Tripped
+2025-04-17 15:20,Substation-1,14.7,Normal
+2025-04-17 15:30,Substation-2,24.1,Overload Detected
