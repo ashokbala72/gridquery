@@ -7,3 +7,4 @@ pydantic
 streamlit
 chromadb
 pandas
+langchain_community
