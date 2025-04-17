@@ -1,15 +1,10 @@
+import streamlit as st
 import os
-from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+# Set from secrets
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+os.environ["OPENAI_PROJECT"] = st.secrets["OPENAI_PROJECT"]
 
-# Assign the API key
-api_key = os.getenv("OPENAI_API_KEY")
-
-# Check if it loaded properly
-if api_key:
-    print("✅ API key loaded successfully!")
-    print("Partial key (safe):", api_key[:8] + "..." + api_key[-5:])
-else:
-    print("❌ API key not loaded. Check your .env file.")
+# Debug output (remove after test)
+st.write("🔐 OpenAI Key Length:", len(os.environ["OPENAI_API_KEY"]))
+st.write("🔐 Project ID:", os.environ["OPENAI_PROJECT"])
