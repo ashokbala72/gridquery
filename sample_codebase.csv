@@ -1,0 +1,25 @@
+file_name,function_name,code_snippet,commit_message
+auth.py,login_user,"def login_user(email, password):
+    user = db.find_user(email)
+    if not user:
+        return False
+    return user.check_password(password)",feat: add login logic
+auth.py,send_otp,"def send_otp(email):
+    otp = generate_otp()
+    mailer.send(email, otp)
+    return otp",feat: send otp email
+register.py,register_user,"def register_user(data):
+    if db.user_exists(data['email']):
+        return 'User exists'
+    db.create_user(data)",feat: user registration logic
+profile.py,update_profile,"def update_profile(user_id, new_data):
+    user = db.get_user(user_id)
+    user.update(new_data)",fix: allow profile updates
+db.py,find_user,"def find_user(email):
+    return users_collection.find_one({ 'email': email })",refactor: abstract db functions
+db.py,create_user,"def create_user(data):
+    users_collection.insert_one(data)",feat: new user creation
+security.py,check_password,"def check_password(user, password):
+    return hash(password) == user.hashed_password",feat: basic password check
+mailer.py,send,"def send(to, content):
+    print(f'Sending email to {to}: {content}')",chore: simulate mail send
